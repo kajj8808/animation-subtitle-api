@@ -1,15 +1,8 @@
-# animation-subtitle-downloader
+# animation subtitle api
 
-To install dependencies:
+animation subtitle 정보를 저장/불러오는 api
 
-```bash
-bun install
-```
+### functions
 
-To run:
-
-```bash
-bun run index.ts
-```
-
-This project was created using `bun init` in bun v1.0.23. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
+- [x] anissia 주간 데이터 DB저장
+- [] 자막 정보 불러오기
