@@ -9,11 +9,13 @@
     "typescript": "^5.0.0"
   },
   "scripts": {
-    "dev": "bun --watch index.ts"
+    "dev": "bun --watch src/index.ts"
   },
   "dependencies": {
     "@prisma/client": "^5.15.0",
+    "cors": "^2.8.5",
     "dotenv": "^16.4.5",
+    "express": "^4.19.2",
     "prisma": "^5.15.0"
   }
 }

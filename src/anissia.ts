@@ -1,4 +1,4 @@
-import db from "./util/db";
+import db from "../util/db";
 const ANISSIA_API_URL = "https://api.anissia.net/anime/";
 
 interface DayAnimation {
@@ -86,10 +86,12 @@ async function autoSaveAnissiaDataToDB() {
   }
 }
 
-(async () => {
+async function init() {
   console.log("anissia api 에서 데이터를 불러와 DB에 저장중 입니다...");
   await autoSaveAnissiaDataToDB();
   console.log(
     "anissia api 에서 가져온 최신 자막 데이터를 저장하는데 성공 하였습니다."
   );
-})();
+}
+
+init();
