@@ -17,7 +17,10 @@ app.get("/", async (_, res) => {
         },
       },
     },
-    take: 10,
+    orderBy: {
+      updateAt: "desc",
+    },
+    take: 12,
   });
   res.json({
     ok: true,
