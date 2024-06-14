@@ -47,6 +47,7 @@ async function autoSaveAnissiaDataToDB() {
             status: anissiaAnimation.status,
             website: anissiaAnimation.website,
             genres: anissiaAnimation.genres,
+            updateAt: new Date(),
           },
         });
         const anissiaAnimationDetails = (await (
@@ -76,6 +77,14 @@ async function autoSaveAnissiaDataToDB() {
                   website: anissiaAnimationDetail.website,
                   updateAt: new Date(anissiaAnimationDetail.updDt),
                   animeNo: anissiaAnimation.animeNo,
+                },
+              });
+              await db.animation.update({
+                where: {
+                  animeNo: anissiaAnimation.animeNo,
+                },
+                data: {
+                  updateAt: new Date(),
                 },
               });
             }

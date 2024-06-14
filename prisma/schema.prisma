@@ -19,7 +19,7 @@ model Animation {
   status   String
   genres   String
   website  String
-  updateAt DateTime   @updatedAt
+  updateAt DateTime
   SubTitle SubTitle[]
 }
 
